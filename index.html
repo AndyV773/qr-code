@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR Code Generator</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- style sheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="mode-wrapper">
+        <input type="checkbox" id="mode" name="mode" checked />
+        <label for="mode" id="mode-label">
+          <i class="fa-regular fa-moon"></i>
+        </label>
+      </div>
+      <h2>QR Code Generator</h2>
+
+      <label for="input">Enter text, URL, image or file link:</label>
+      <textarea id="input" placeholder="Enter here..."></textarea>
+
+      <div class="options">
+        <label>
+          QR Color: <input type="color" id="qrColor" value="#000000" />
+        </label>
+        <label>
+          Background: <input type="color" id="bgColor" value="#ffffff" />
+        </label>
+        <label>
+          Size:
+          <select id="qrSize">
+            <option value="128">128x128</option>
+            <option value="256" selected>256x256</option>
+            <option value="512">512x512</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="qrcode"></div>
+
+      <button id="downloadBtn">Download QR Code</button>
+    </div>
+
+    <!-- QRCode.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
