@@ -8,7 +8,7 @@ const modeLabel = document.getElementById('mode-label')
 const downloadBtn = document.getElementById('downloadBtn');
 
 function generateQRCode() {
-    const text = input.value.trim() || 'Hello';
+    const text = input.value.trim() || 'https://github.com/AndyV773/qr-code/raw/main/assets/images/sharky.jpg';
     const size = parseInt(qrSize.value);
     const fg = qrColor.value;
     const bg = bgColor.value;
